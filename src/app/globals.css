@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  /* Cores principais */
+  --jc-background: #151925;
+  --jc-background-secondary: #323846;
+  --jc-background-dark: #0a0a0a;
+  --jc-foreground: #ffffff;
+  --jc-foreground-secondary: #b3b3b3;
+  --jc-foreground-muted: #666666;
+
+  /* Cores de destaque */
+  --jc-primary: #007bff;
+  --jc-primary-light: #3399ff;
+  --jc-primary-dark: #0056b3;
+  --jc-secondary: #6c757d;
+  --jc-secondary-light: #8a9299;
+  --jc-secondary-dark: #495057;
+
+  /* Cores de estado */
+  --jc-success: #28a745;
+  --jc-success-light: #34ce57;
+  --jc-success-dark: #1e7e34;
+  --jc-warning: #ffc107;
+  --jc-warning-light: #ffd43b;
+  --jc-warning-dark: #e0a800;
+  --jc-danger: #dc3545;
+  --jc-danger-light: #e74c3c;
+  --jc-danger-dark: #bd2130;
+  --jc-info: #17a2b8;
+  --jc-info-light: #39b5d1;
+  --jc-info-dark: #138496;
+
+  /* Cores para acentos */
+  --jc-accent: #ff6b6b;
+  --jc-accent-light: #ff8787;
+  --jc-accent-dark: #ff5252;
+  --jc-gold: #ffd700;
+  --jc-gold-light: #ffed4e;
+  --jc-gold-dark: #e6c200;
+
+  /* Cores para temas */
+  --jc-purple: #8b5cf6;
+  --jc-purple-light: #a78bfa;
+  --jc-purple-dark: #7c3aed;
+  --jc-teal: #14b8a6;
+  --jc-teal-light: #5eead4;
+  --jc-teal-dark: #0f766e;
+  --jc-indigo: #6366f1;
+  --jc-indigo-light: #818cf8;
+  --jc-indigo-dark: #4f46e5;
+  --jc-red: #FF0138;
+
+  /* Bordas */
+  --jc-border: #333333;
+  --jc-border-light: #555555;
+  --jc-border-dark: #1a1a1a;
+}
+
+@theme inline {
+  /* Mapeamento das cores para o Tailwind */
+  --color-jcbackground: var(--jc-background);
+  --color-jcbackground-secondary: var(--jc-background-secondary);
+  --color-jcbackground-dark: var(--jc-background-dark);
+  --color-jctext: var(--jc-foreground);
+  --color-jctext-secondary: var(--jc-foreground-secondary);
+  --color-jctext-muted: var(--jc-foreground-muted);
+  --color-jcprimary: var(--jc-primary);
+  --color-jcprimary-light: var(--jc-primary-light);
+  --color-jcprimary-dark: var(--jc-primary-dark);
+  --color-jcsecondary: var(--jc-secondary);
+  --color-jcaccent: var(--jc-accent);
+  --color-jcgold: var(--jc-gold);
+  --color-jcpurple: var(--jc-purple);
+  --color-jcteal: var(--jc-teal);
+  --color-jcindigo: var(--jc-indigo);
+  --color-jcred: var(--jc-red);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--jc-background);
+  color: var(--jc-foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Suppress hydration warnings for browser extension attributes */
+body[cz-shortcut-listen] {
+  /* This rule helps prevent hydration mismatches from browser extensions */
+}
