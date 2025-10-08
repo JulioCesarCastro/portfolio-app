@@ -484,7 +484,7 @@ export default function Home() {
             <span className="text-jcred">JC</span> Portfolio
           </div>
           <p className="text-gray-400 mb-4">
-            Desenvolvido com ❤️ por Julio Castro
+            Desenvolvido por Julio Castro
           </p>
           <div className="flex justify-center gap-6">
             <a href="https://www.linkedin.com/in/julio-castro-171a88114/" className="text-gray-400 hover:text-jcred transition-colors">LinkedIn</a>
