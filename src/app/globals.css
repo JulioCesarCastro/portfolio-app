@@ -84,8 +84,3 @@ body {
   color: var(--jc-foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
-
-/* Suppress hydration warnings for browser extension attributes */
-body[cz-shortcut-listen] {
-  /* This rule helps prevent hydration mismatches from browser extensions */
-}
