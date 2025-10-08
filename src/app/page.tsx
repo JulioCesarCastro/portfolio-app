@@ -2,6 +2,7 @@ import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import DownloadButton from "@/components/DownloadButton";
 import MobileMenu from "@/components/MobileMenu";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function Home() {
 
@@ -500,6 +501,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Botão Flutuante do WhatsApp */}
+      <FloatingWhatsApp />
     </div>
   );
 }
