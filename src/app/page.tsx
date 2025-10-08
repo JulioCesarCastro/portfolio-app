@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import DownloadButton from "@/components/DownloadButton";
+import MobileMenu from "@/components/MobileMenu";
 
 export default function Home() {
 
@@ -20,6 +21,7 @@ export default function Home() {
             <a href="#testimonials" className="hover:text-jcred transition-colors duration-300">Depoimentos</a>
             <a href="#contact" className="hover:text-jcred transition-colors duration-300">Contato</a>
           </div>
+          <MobileMenu />
         </div>
       </nav>
 
@@ -43,7 +45,7 @@ export default function Home() {
               </DownloadButton>
             </div>
           </div>
-          <div className="flex justify-center">
+          <div className="lg:flex justify-center md:block hidden">
             <div className="relative">
               <div className="absolute inset-0 bg-jcred/20 rounded-full blur-3xl"></div>
               <Image
@@ -73,7 +75,7 @@ export default function Home() {
                   height={450}
                   className="relative z-10 rounded-2xl shadow-2xl"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-jcred text-white p-4 rounded-xl shadow-lg">
+                <div className="absolute -bottom-6 -right-6 bg-jcred text-white p-4 rounded-xl shadow-lg z-10">
                   <div className="text-2xl font-bold">11+</div>
                   <div className="text-sm">Anos de Experiência</div>
                 </div>
