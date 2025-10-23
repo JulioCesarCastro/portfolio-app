@@ -444,7 +444,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <span className="text-jcred mr-3">📧</span>
-                    <span>juliocastroti@gmail.com</span>
+                    <span>contato@juliocastrodev.io</span>
                   </div>
                   <div className="flex items-center">
                     <span className="text-jcred mr-3">📱</span>
