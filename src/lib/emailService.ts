@@ -23,7 +23,7 @@ export const sendEmail = async (formData: ContactFormData): Promise<boolean> => 
             contact: formData.contact,
             message: formData.message,
             to_name: 'Julio Castro',
-            destination_email: 'curriculo@juliocastrodev.io',
+            destination_email: 'contato@juliocastrodev.io',
             title: 'Contato do Portfolio',
         };
 
