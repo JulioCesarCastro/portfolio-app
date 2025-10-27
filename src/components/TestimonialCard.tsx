@@ -17,7 +17,7 @@ export default function TestimonialCard({ initials, name, role, testimonial }: T
                     <p className="text-sm text-gray-400">{role}</p>
                 </div>
             </div>
-            <p className="text-gray-300 italic">&ldquo;{testimonial}&rdquo;</p>
+            <p className="text-gray-300 italic">{testimonial}</p>
         </div>
     );
 }
