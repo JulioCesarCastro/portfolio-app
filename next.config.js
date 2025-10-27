@@ -3,6 +3,14 @@ const nextConfig = {
     // Suppress hydration warnings for browser extension attributes
     reactStrictMode: true,
 
+    // Enable static export for GitHub Pages
+    output: 'export',
+
+    // Disable image optimization for static export
+    images: {
+        unoptimized: true,
+    },
+
     // Add configuration to handle browser extension interference
     experimental: {
         // This helps with hydration issues caused by browser extensions
