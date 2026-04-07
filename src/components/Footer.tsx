@@ -9,7 +9,7 @@ export default function Footer() {
                         <a href="https://github.com/JulioCesarCastro" className="text-jctext-secondary hover:text-jcgold text-sm transition-colors duration-300">GitHub</a>
                         <a href="https://www.instagram.com/juliocastrodev" className="text-jctext-secondary hover:text-jcgold text-sm transition-colors duration-300">Instagram</a>
                     </div>
-                    <p className="text-jctext-secondary text-xs">© 2024 Julio Castro. Todos os direitos reservados.</p>
+                    <p className="text-jctext-secondary text-xs">© {new Date().getFullYear()} Julio Castro. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>

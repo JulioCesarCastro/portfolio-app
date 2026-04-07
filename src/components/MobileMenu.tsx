@@ -75,7 +75,7 @@ export default function MobileMenu() {
 
                 <div className="p-6 border-t border-jcborder flex-shrink-0">
                     <div className="text-xs text-jctext-secondary text-center">
-                        © 2024 Julio Castro
+                        © {new Date().getFullYear()} Julio Castro
                     </div>
                 </div>
             </div>
