@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,9 +12,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  title: "JC Portfolio",
-  description: "Desenvolvedor Full Stack",
+  title: "Julio Castro — Desenvolvedor Full Stack",
+  description: "Portfolio profissional de Julio Castro, Desenvolvedor Full Stack",
 };
 
 export default function RootLayout({
@@ -23,8 +29,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
-      <body className="font-sans antialiased bg-jcbackground text-white" suppressHydrationWarning>
+    <html
+      lang="pt-BR"
+      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="font-sans antialiased bg-jcbackground text-jctext" suppressHydrationWarning>
         {children}
       </body>
     </html>
