@@ -7,18 +7,18 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ initials, name, role, testimonial }: TestimonialCardProps) {
     return (
-        <div className="bg-jcbackground-secondary p-6 rounded-xl">
-            <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-jcred/20 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-jcred font-bold">{initials}</span>
+        <div className="bg-jcbackground-card border border-jcborder hover:border-jcgold/30 transition-colors duration-300 p-8 rounded-xl flex flex-col">
+            <div className="font-playfair text-6xl text-jcgold/20 leading-none mb-4">&ldquo;</div>
+            <p className="text-jctext-secondary italic leading-relaxed text-sm flex-1 mb-6">{testimonial}</p>
+            <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-jcbackground border border-jcgold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="font-playfair text-sm text-jctext-secondary">{initials}</span>
                 </div>
                 <div>
-                    <h4 className="font-semibold">{name}</h4>
-                    <p className="text-sm text-gray-400">{role}</p>
+                    <h4 className="font-semibold text-jctext text-sm">{name}</h4>
+                    <p className="text-jctext-secondary text-xs uppercase tracking-widest">{role}</p>
                 </div>
             </div>
-            <p className="text-gray-300 italic">{testimonial}</p>
         </div>
     );
 }
-
