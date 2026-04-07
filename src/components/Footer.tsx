@@ -1,25 +1,17 @@
 export default function Footer() {
     return (
-        <footer className="bg-jcbackground py-8">
-            <div className="max-w-7xl mx-auto px-6 text-center">
-                <div className="text-2xl font-bold mb-4">
-                    <span className="text-jcred">JC</span> Portfolio
-                </div>
-                <p className="text-gray-400 mb-4">
-                    Desenvolvido por Julio Castro
-                </p>
-                <div className="flex justify-center gap-6">
-                    <a href="https://www.linkedin.com/in/julio-castro-171a88114/" className="text-gray-400 hover:text-jcred transition-colors">LinkedIn</a>
-                    <a href="https://github.com/JulioCesarCastro" className="text-gray-400 hover:text-jcred transition-colors">GitHub</a>
-                    <a href="https://www.instagram.com/juliocastrodev" className="text-gray-400 hover:text-jcred transition-colors">Instagram</a>
-                </div>
-                <div className="mt-6 pt-6 border-t border-jcbackground">
-                    <p className="text-gray-500 text-sm">
-                        © 2024 Julio Castro. Todos os direitos reservados.
-                    </p>
+        <footer className="bg-jcbackground border-t border-jcborder py-10">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="font-playfair text-lg text-jctext">Julio Castro</div>
+                    <div className="flex gap-6">
+                        <a href="https://www.linkedin.com/in/julio-castro-171a88114/" className="text-jctext-secondary hover:text-jcgold text-sm transition-colors duration-300">LinkedIn</a>
+                        <a href="https://github.com/JulioCesarCastro" className="text-jctext-secondary hover:text-jcgold text-sm transition-colors duration-300">GitHub</a>
+                        <a href="https://www.instagram.com/juliocastrodev" className="text-jctext-secondary hover:text-jcgold text-sm transition-colors duration-300">Instagram</a>
+                    </div>
+                    <p className="text-jctext-secondary text-xs">© 2024 Julio Castro. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>
     );
 }
-
