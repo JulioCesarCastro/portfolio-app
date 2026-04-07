@@ -36,7 +36,7 @@ export default function AboutSection() {
                         <div className="relative">
                             <div className="absolute inset-0 bg-jcgold/5 rounded-2xl blur-3xl transform rotate-6" />
                             <Image
-                                src="/images/profileaboutme.png"
+                                src="/images/profilehome.png"
                                 alt="Julio Castro"
                                 width={450}
                                 height={450}
