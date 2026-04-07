@@ -20,25 +20,31 @@ const softSkills = [
     "Mentoria"
 ];
 
+const stats = [
+    { value: "11+", label: "Anos de Experiência" },
+    { value: "15+", label: "Tecnologias" },
+    { value: "4", label: "Empresas" },
+];
+
 export default function AboutSection() {
     return (
-        <section id="about" className="min-h-screen flex items-center bg-jcbackground-secondary py-20">
+        <section id="about" className="flex items-center bg-jcbackground-secondary py-28">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Left Side - Image */}
                     <div className="flex justify-center">
                         <div className="relative">
-                            <div className="absolute inset-0 bg-jcred/20 rounded-2xl blur-3xl transform rotate-6"></div>
+                            <div className="absolute inset-0 bg-jcgold/5 rounded-2xl blur-3xl transform rotate-6" />
                             <Image
                                 src="/images/profileaboutme.png"
                                 alt="Julio Castro"
                                 width={450}
                                 height={450}
-                                className="relative z-10 rounded-2xl shadow-2xl"
+                                className="relative z-10 rounded-2xl shadow-2xl ring-1 ring-jcgold/20"
                             />
-                            <div className="absolute -bottom-6 -right-6 bg-jcred text-white p-4 rounded-xl shadow-lg z-10">
-                                <div className="text-2xl font-bold">11+</div>
-                                <div className="text-sm">Anos de Experiência</div>
+                            <div className="absolute -bottom-6 -right-6 bg-jcbackground-card border border-jcgold/30 text-jcgold p-4 rounded-xl shadow-lg z-10">
+                                <div className="font-playfair text-2xl font-bold">11+</div>
+                                <div className="text-xs text-jctext-secondary uppercase tracking-widest">Anos de Exp.</div>
                             </div>
                         </div>
                     </div>
@@ -46,27 +52,30 @@ export default function AboutSection() {
                     {/* Right Side - Content */}
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-5xl md:text-6xl font-bold mb-4">
-                                Sobre <span className="text-jcred">Mim</span>
+                            <h2 className="font-playfair text-5xl md:text-6xl text-jctext mb-2">
+                                Sobre Mim
                             </h2>
-                            <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                                Sou um desenvolvedor Full Stack apaixonado por tecnologia e inovação.
-                                Com experiência em diversas empresas, tenho expertise em criar soluções
-                                robustas e escaláveis que impactam positivamente os negócios.
+                            <div className="w-12 h-px bg-jcgold mb-6" />
+                            <p className="text-lg text-jctext-secondary leading-relaxed">
+                                Sou um desenvolvedor Full Stack com mais de 11 anos de experiência criando
+                                soluções robustas e escaláveis. Atuei em empresas de tecnologia de diferentes
+                                portes, liderando e integrando equipes em projetos de alto impacto.
                             </p>
                         </div>
 
-                        {/* Stats Grid */}
-                        <div className="grid grid-cols-2 gap-6">
-                            <div className="bg-jcbackground p-6 rounded-xl text-center">
-                                <div className="text-3xl font-bold text-jcred mb-2">15+</div>
-                                <div className="text-gray-400">Tecnologias Dominadas</div>
-                            </div>
+                        {/* Stats */}
+                        <div className="grid grid-cols-3 gap-4">
+                            {stats.map((stat) => (
+                                <div key={stat.label} className="text-center">
+                                    <div className="font-playfair text-4xl text-jcgold">{stat.value}</div>
+                                    <div className="text-jctext-secondary text-xs uppercase tracking-widest mt-1">{stat.label}</div>
+                                </div>
+                            ))}
                         </div>
 
                         {/* Technical Skills */}
                         <div className="space-y-4">
-                            <h3 className="text-2xl font-semibold text-jcred">Skills Técnicas</h3>
+                            <h3 className="text-xs uppercase tracking-widest text-jctext-secondary">Skills Técnicas</h3>
                             <div className="grid grid-cols-2 gap-4">
                                 {skills.map((skill) => (
                                     <SkillCard
@@ -80,18 +89,17 @@ export default function AboutSection() {
 
                         {/* Soft Skills */}
                         <div className="space-y-4">
-                            <h3 className="text-2xl font-semibold text-jcred">Soft Skills</h3>
+                            <h3 className="text-xs uppercase tracking-widest text-jctext-secondary">Soft Skills</h3>
                             <div className="flex flex-wrap gap-3">
                                 {softSkills.map((skill) => (
-                                    <div key={skill} className="bg-jcbackground px-4 py-2 rounded-full border border-jcred/30">
-                                        <span className="text-sm">{skill}</span>
+                                    <div key={skill} className="border border-jcgold/20 text-jctext-secondary text-sm px-3 py-1 rounded-full">
+                                        {skill}
                                     </div>
                                 ))}
                             </div>
                         </div>
 
-                        {/* Call to Action */}
-                        <div className="pt-6">
+                        <div className="pt-2">
                             <DownloadButton variant="primary" size="lg">
                                 Baixar Currículo Completo
                             </DownloadButton>
@@ -102,4 +110,3 @@ export default function AboutSection() {
         </section>
     );
 }
-

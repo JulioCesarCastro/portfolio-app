@@ -5,13 +5,9 @@ interface SkillCardProps {
 
 export default function SkillCard({ category, technologies }: SkillCardProps) {
     return (
-        <div className="bg-jcbackground p-4 rounded-lg">
-            <div className="flex items-center gap-3 mb-2">
-                <div className="w-2 h-2 bg-jcred rounded-full"></div>
-                <span className="font-medium">{category}</span>
-            </div>
-            <div className="text-sm text-gray-400">{technologies}</div>
+        <div className="bg-jcbackground-card border border-jcborder hover:border-jcgold/40 transition-colors duration-300 p-4 rounded-xl">
+            <div className="text-jcgold text-xs uppercase tracking-widest font-sans mb-2">{category}</div>
+            <div className="font-mono text-sm text-jctext-secondary">{technologies}</div>
         </div>
     );
 }
-
