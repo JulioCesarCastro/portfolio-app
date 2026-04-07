@@ -6,17 +6,14 @@ interface CompanyCardProps {
 
 export default function CompanyCard({ initials, name, description }: CompanyCardProps) {
     return (
-        <div className="bg-jcbackground-secondary p-8 rounded-xl hover:transform hover:scale-105 transition-all duration-300">
-            <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-jcred/20 rounded-full mx-auto flex items-center justify-center">
-                    <span className="text-jcred font-bold text-xl">{initials}</span>
-                </div>
-                <h3 className="text-xl font-semibold">{name}</h3>
-                <p className="text-gray-400 text-sm">
+        <div className="bg-jcbackground-card border border-jcborder hover:border-jcgold/30 transition-colors duration-300 p-8 rounded-xl">
+            <div className="border-l-2 border-jcgold/40 pl-6 space-y-2">
+                <div className="font-playfair text-2xl text-jctext-secondary">{initials}</div>
+                <h3 className="font-semibold text-jctext">{name}</h3>
+                <p className="text-jctext-secondary text-sm leading-relaxed">
                     {description}
                 </p>
             </div>
         </div>
     );
 }
-
