@@ -15,33 +15,40 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ logo, name, description, url, technologies }: ProjectCardProps) {
     return (
-        <div className="bg-jcbackground rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-            <div className="h-48 bg-jcred/20 flex items-center justify-center">
+        <div className="bg-jcbackground-card border border-jcborder hover:border-jcgold/30 transition-colors duration-300 rounded-xl overflow-hidden flex flex-col">
+            <div className="h-0.5 bg-jcgold/60 w-full flex-shrink-0" />
+            <div className="h-48 bg-jcbackground flex items-center justify-center p-6">
                 {logo ? (
                     <Image
                         src={logo.src}
                         alt={logo.alt}
                         width={logo.width}
                         height={logo.height}
+                        className="max-h-28 w-auto object-contain"
                     />
                 ) : (
-                    <span className="text-white font-bold text-2xl">{name}</span>
+                    <span className="font-playfair text-2xl text-jctext-secondary">{name}</span>
                 )}
             </div>
-            <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">
-                    <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
-                </h3>
-                <p className="text-gray-400 mb-4">{description}</p>
-                <div className="flex flex-wrap gap-2">
+            <div className="p-6 flex flex-col flex-1">
+                <h3 className="font-semibold text-jctext mb-2">{name}</h3>
+                <p className="text-jctext-secondary text-sm leading-relaxed mb-4 flex-1">{description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
                     {technologies.map((tech) => (
-                        <span key={tech} className="bg-jcred/20 text-jcred px-3 py-1 rounded-full text-sm">
+                        <span key={tech} className="bg-jcbackground border border-jcborder font-mono text-xs text-jctext-secondary px-2 py-0.5 rounded">
                             {tech}
                         </span>
                     ))}
                 </div>
+                <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-jcgold text-sm hover:text-jcgold-light transition-colors duration-300"
+                >
+                    Ver projeto →
+                </a>
             </div>
         </div>
     );
 }
-

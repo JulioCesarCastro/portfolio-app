@@ -33,15 +33,14 @@ const projects = [
 
 export default function ProjectsSection() {
     return (
-        <section id="projects" className="min-h-screen flex items-center bg-jcbackground-secondary py-20">
+        <section id="projects" className="flex items-center bg-jcbackground-secondary py-28">
             <div className="max-w-7xl mx-auto px-6">
                 <SectionHeader
                     title="Projetos que"
                     highlightedText="Atuei"
                     description="Alguns dos projetos que tive a oportunidade de atuar"
                 />
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid md:grid-cols-2 gap-8">
                     {projects.map((project) => (
                         <ProjectCard
                             key={project.name}
@@ -57,4 +56,3 @@ export default function ProjectsSection() {
         </section>
     );
 }
-
