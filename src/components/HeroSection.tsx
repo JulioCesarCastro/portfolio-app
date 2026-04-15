@@ -35,6 +35,7 @@ export default function HeroSection() {
                             width={500}
                             height={500}
                             className="relative z-10 rounded-2xl ring-1 ring-jcgold/20"
+                            loading="eager"
                         />
                     </div>
                 </div>

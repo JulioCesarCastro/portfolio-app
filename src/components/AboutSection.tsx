@@ -41,6 +41,7 @@ export default function AboutSection() {
                                 width={450}
                                 height={450}
                                 className="relative z-10 rounded-2xl shadow-2xl ring-1 ring-jcgold/20"
+                                loading="eager"
                             />
                             <div className="absolute -bottom-6 -right-6 bg-jcbackground-card border border-jcgold/30 text-jcgold p-4 rounded-xl shadow-lg z-10">
                                 <div className="font-playfair text-2xl font-bold">11+</div>
